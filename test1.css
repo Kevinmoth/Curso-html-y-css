@@ -9,6 +9,19 @@ body {
   display: inline-block;
 }
 
+.matelogo {
+  width: 50px; /* define el ancho deseado */
+  height: auto; /* mantiene la proporción de la imagen */
+  margin-left: 5px;
+  margin-right: 1px;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -165,7 +178,7 @@ body {
   }
 }
 
-
+/* Aca empieza el menu lateral y el frontal */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
 	*{
 		margin: 0;
@@ -178,7 +191,7 @@ body {
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background: rgba(0,0,0,0.6);
+		
 		z-index: -1;
 		top: 0;left: 0;
 	}
