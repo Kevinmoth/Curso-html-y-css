@@ -1,0 +1,352 @@
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.boton {
+  margin-top: 5px; /* Espacio entre los botones */
+  padding: 3% 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+  background-color: #b89f33;
+  color: white;
+  border: none;
+  opacity: 0;
+}
+
+.boton:hover {
+  background-color: #45a049;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin-top: 15%;
+  margin-left: 35%;
+  margin-right: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.botones {
+  position: absolute; /* Mantén esta propiedad para posicionar los botones de forma absoluta */
+  top: 60%; /* Mantén el borde superior de los botones en el 50% de la altura del contenedor */
+  transform: translateY(-50%); /* Mantén la transformación para ajustar verticalmente los botones */
+  z-index: 1;
+  display: flex; /* Mantén esta propiedad para hacer que los botones sean contenedor flexible */
+  justify-content: center; /* Mantén esta propiedad para centrar los elementos horizontalmente */
+  align-items: center; /* Mantén esta propiedad para centrar los elementos verticalmente */
+  width: 100%; /* Mantén esta propiedad para que los botones ocupen el 100% del ancho del contenedor */
+  left: 30%; /* Posición inicial: centro horizontal */
+  transform: translateX(-50%); /* Centra los botones horizontalmente */
+  /* display: none; */ /* Puedes eliminar esta línea si deseas que los botones estén visibles inicialmente */
+  opacity: 0; /* Inicialmente, establece la opacidad en 0 para que los botones estén ocultos */
+  animation: fadeIn 2s ease forwards;
+}
+
+.contenedor article.war:hover .botones {
+  opacity: 1; /* Cuando el mouse está sobre la imagen, muestra los botones */
+}
+.contenedor article.pala:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.hunter:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.rogue:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.dk:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.war:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.chaman:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.mage:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.brujo:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.druida:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+.contenedor article.sacer:not(:hover) .botones {
+  animation: fadeOut 0.5s ease forwards; /* Aplica la animación de fadeOut cuando el mouse no está sobre la imagen */
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Empieza con una opacidad de 0 (invisible) */
+  }
+  to {
+      opacity: 1; /* Termina con una opacidad de 1 (totalmente visible) */
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1; /* Comienza con una opacidad de 1 (totalmente visible) */
+  }
+  to {
+      opacity: 0; /* Termina con una opacidad de 0 (invisible) */
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+
+
+
+
+.contenedor article {
+  width: calc(33.33% - 20px); /* Ajusta el ancho de cada artículo */
+  margin-bottom: 30px; /* Espacio entre las filas */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contenedor img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contenedor img:last-child {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.contenedor article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.contenedor article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.contenedor article:hover::before {
+  opacity: 1;
+}
+
+.contenedor article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+.contenedor:hover .boton {
+  opacity: 1;
+}
+
+.contenedor:hover .botones {
+  display: block;
+}

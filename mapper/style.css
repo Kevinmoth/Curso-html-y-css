@@ -1,0 +1,89 @@
+.titulo {
+    color: rgba(171, 77, 27, 0.793);
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 50px;
+}
+
+.enlaces {
+    text-decoration: none;
+}
+
+.coordenadas {
+    column-count: 3;
+    column-gap: 1px;
+    padding: 10px;
+    column-gap: 20px;
+    opacity: 0; /* Inicialmente establecer la opacidad en 0 */
+    transition: opacity 2s ease; /* Transición suave de la opacidad */
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #aeeca8;
+    background-size: 55%;
+    border-radius: 5%;
+    border: #7f32a8 1px solid;
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 20px;
+    color:#306826;
+    
+
+}
+
+.coordenadas.mostrar {
+    opacity: 1; /* Cambiar la opacidad a 1 para mostrar las coordenadas */
+}
+
+.coordenada {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #69cd68;
+    text-align: center;
+
+}
+
+.title {
+    font-family: 'Sixtyfour', sans-serif;
+    
+    font-size: 30px;
+
+}
+
+.map {
+    width: 500px;
+    border-radius: 10%; 
+}  
+
+.s {
+    color: rgb(205, 73, 73);
+}
+
+.tipo {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 20px;
+    color:brown
+}
+
+#btn {
+    /* Estilos normales del botón */
+    background-color: #2d8f2f; /* Color de fondo */
+    border: 1px solid #8a29b7; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Mostrar como un bloque en línea */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 4px 2px; /* Margen */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 8px; /* Radio de borde */ 
+    transition: transform 0.2s ease; /* Transición suave de transformación */
+}
+
+#btn:hover {
+    transform: scale(1.1); /* Agrandar al pasar el mouse por encima */
+}
+
+#btn:active {
+    transform: scale(0.9); /* Reducir al hacer clic */
+}

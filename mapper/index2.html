@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<title class="titulo">App de Mapeado</title>
+<link href="style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Sixtyfour&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <hr>
+  <h2 class="title" style="color: rgb(100, 90, 169);">App de Mapeado</h2>
+  <main>
+    <p>Ingresa el código extraído del <strong>DIV</strong>. La guía de uso está en mi <a
+          href="https://github.com/Kevinmoth/WoW_BD_Map" target="_blank" rel="noopener" class="enlaces">GitHub.</a></p>
+    <p><input type="text" id="code"></p>
+    <p><input type="button" id="btn" value="Mapear" onclick="mapear()"></p> 
+    <p id="result" class="coordenadas"></p>
+    <input type="button" id="btn" value="Copiar coordenadas" onclick="copiarCoordenadas()">
+    <hr>
+    
+    <small><p>Mapper by Matecitos <a href="https://github.com/Kevinmoth/WoW_BD_Map" class="enlaces" target="_blank" rel="noopener">GitHub</a></p></small>
+  </footer>
+
+  <script>
+
+function copiarCoordenadas() {
+    var coordenadas = document.getElementById('result').innerText;
+    
+    // Crear un elemento de textarea oculto para copiar el texto
+    var textarea = document.createElement('textarea');
+    textarea.value = coordenadas;
+    document.body.appendChild(textarea);
+    
+    // Seleccionar el texto en el textarea
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // Para navegadores móviles
+    
+    // Copiar el texto al portapapeles
+    document.execCommand('copy');
+    
+    // Eliminar el textarea
+    document.body.removeChild(textarea);
+}
+    // Mostrar un mensaje de éxito
+    alert('¡Las coordenadas se han copiado al portapapeles!');
+    function mapear() {
+      var codigo = document.getElementById('code').value;
+      var coordenadas_matches = codigo.match(/style="left: ([-+]?\d*\.\d+|\d+)%; top: ([-+]?\d*\.\d+|\d+)%;/g);
+
+      if (coordenadas_matches) {
+    var coordenadas_resultantes = coordenadas_matches.map(function(match) {
+        var coordenadas = match.match(/left: ([-+]?\d*\.\d+|\d+)%; top: ([-+]?\d*\.\d+|\d+)%;/);
+        return '<div class="coordenada">/way ' + coordenadas[1] + ' ' + coordenadas[2] + '</div>';
+    });
+    var resultado_final = coordenadas_resultantes.join('');
+    document.getElementById('result').innerHTML = resultado_final;
+    document.getElementById('result').classList.add('mostrar'); // Agregar clase para mostrar con transición
+} else {
+    document.getElementById('result').innerText = "¡Error! Por favor, ingresa el código correctamente.";
+    document.getElementById('result').classList.remove('mostrar'); // Eliminar clase para ocultar con transición
+}
+
+    }
+  </script>
+</body>
+</html>
