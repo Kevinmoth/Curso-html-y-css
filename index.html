@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MateWeb</title>
-  <link href="script.js">
   <link rel="stylesheet" media="all" href="test1.css" />
   <link rel="icon" type="image/png" href="222.png">
 
 </head>
+<!---------------------------------Body------------------------------------------->
 <body> 
+    
+    <!---------------------------------Menu superior/lateral------------------------------------------->
     <div class="bg"></div> 
     <header class="header">
 		<div class="container">
@@ -27,7 +29,6 @@
 		</div>
 	</header>
 	<div class="capa"></div>
-<!--	--------------->
 <input type="checkbox" id="btn-menu">
 <div class="container-menu">
 	<div class="cont-menu">
@@ -35,7 +36,7 @@
 			<a href="https://github.com/Kevinmoth">Mi GitHub</a>
 			<a href="/Matecitos_web/mapper/index2.html">Mapper</a>
 			<a href="https://discord.gg/bhufRsfjkg">Discord</a>
-			<!--<a href="#">Facebook</a>----------->
+			<a href="#">Addons</a>
 			<!--<a href="#">Youtube</a>----------->
 			<!--<a href="#">Instagram</a>----------->
 		</nav>
@@ -45,28 +46,42 @@
   <div class=sub menu>
 
   </div>  
-
+<!---------------------------------Menu de clases------------------------------------------->
   <div class="contenedor">
     <article class="war">
         <img src="Sin título.png" title="war" alt="Imagen de fondo">
         <div class="botones-contenedor">
             <div class="botones">
-                <button class="boton">Guias</button>
+                <button id="boton_abrir_modal_Guias_war" class="boton">Guias</button>
                 <button class="boton">Equipo</button>
             </div>
         </div>
     </article>
-      
-    </article>
     
-    <article class="pala">
-        <img src="Pala.png" alt="Imagen de fondo">
-        <div class="botones">
-        <button class="boton">Guias</button>
+    
+    </article>
+   <!------------------------------------>
+   <article class="pala">
+    <img src="Pala.png" alt="Imagen de fondo">
+    <div class="botones">
+        <button class="boton" id="abrirModal">Guias</button>
         <button class="boton">Equipo</button>
-        </div>
-    </article>
-    
+    </div>
+</article>
+
+<!-- Ventana Modal -->
+<div id="miModal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" id="cerrarModal">&times;</span>
+        <button class="boton">Represion</button>
+        <button class="boton">Proteccion</button>
+        <button class="boton">Sagrado</button>
+        <button class="boton">Sagrado PvP</button>
+        <button class="boton">Represion PvP</button>
+        <button class="boton">Preg PvP</button>
+    </div>
+</div>
+    <!------------------------------------>
     <article class="hunter">
         <img src="Hunter.png" alt="Imagen de fondo">
         <div class="botones">
@@ -74,6 +89,7 @@
             <button class="boton">Equipo</button>
             </div>
     </article>
+    <!------------------------------------>
     <article class="rogue">
         <img src="Rogue.png" alt="Imagen de fondo">
         <div class="botones">
@@ -81,6 +97,7 @@
             <button class="boton">Equipo</button>
             </div>
         </article>
+        <!------------------------------------>
     <article class="dk"   >
         <img src="Dk.png" alt="Imagen de fondo">
         <div class="botones">
@@ -88,6 +105,7 @@
             <button class="boton">Equipo</button>
             </div>
     </article>
+    <!------------------------------------>
     <article class="chaman">
         <img src="Chaman.png" alt="Imagen de fondo">
         <div class="botones">
@@ -95,6 +113,7 @@
             <button class="boton">Equipo</button>
             </div>
         </article>
+        <!------------------------------------>
     <article class="mage">
         <img src="Mago.png" alt="Imagen de fondo">
         <div class="botones">
@@ -102,6 +121,7 @@
             <button class="boton">Equipo</button>
             </div>
         </article>
+        <!------------------------------------>
     <article class="brujo">
         <img src="brujo.png" alt="Imagen de fondo">
         
@@ -110,6 +130,7 @@
             <button class="boton">Equipo</button>
             </div>
         </article>
+        <!------------------------------------>
     <article class="druida">
         <img src="Druidapng.png" alt="Imagen de fondo">
         <div class="botones">
@@ -117,30 +138,47 @@
             <button class="boton">Equipo</button>
             </div>
         </article>
+        <!------------------------------------>
     <article>
         
+        
     </article>
+    <!------------------------------------>
     <article class="sacer">
         <img src="Sacer.png" alt="Imagen de fondo">
         <div class="botones">
             <button class="boton">Guias</button>
             <button class="boton">Equipo</button>
             </div>
-        </article>
-    <article>
-        
     </article>
-    <!-- Repite lo anterior para el resto de imágenes -->
+    <!------------------------------------>
+    <article>
+    </article>
+    <!------------------------------------>
+    
+    
   </div>
 
+  <script src="script.js">
+    document.getElementById("cerrarModal").addEventListener("click", function() {
+  document.getElementById("miModal").style.display = "none"; // Oculta la ventana modal al hacer clic en el botón de cierre
+});
+
+// Cierra la ventana modal si el usuario hace clic fuera de ella
+window.onclick = function(event) {
+  var modal = document.getElementById("miModal");
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+};
 
 
-
-  
-  <script>
-
-    
   </script>
+    
+
+
+
+
   </div>
 </body>
 </html>

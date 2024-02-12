@@ -1,3 +1,26 @@
+//------------------------Ventanas MODAL---------------------------
+
+document.getElementById("abrirModal").addEventListener("click", function() {
+  document.getElementById("miModal").style.display = "block"; // Muestra la ventana modal al hacer clic en el botón "Guias"
+});
+
+document.getElementById("cerrarModal").addEventListener("click", function() {
+  document.getElementById("miModal").style.display = "none"; // Oculta la ventana modal al hacer clic en el botón de cierre
+});
+
+// Cierra la ventana modal si el usuario hace clic fuera de ella
+window.onclick = function(event) {
+  var modal = document.getElementById("miModal");
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+};
+  
+
+
+
+//------------------------FONDO ANIMADO---------------------------
+
 let frag = `
 vec4 abyssColor = vec4(0, 0, 0, 0);
 vec4 tunnelColor = vec4(1.5, 1.2, 1.1, 1);
@@ -91,3 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+  
+  
