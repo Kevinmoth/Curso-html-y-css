@@ -369,6 +369,8 @@ body {
   /* ------------------------------------------------------------------------ */
   
   /* Estilos para la ventana modal */
+
+  
   .modal {
     display: none; /* Oculta la ventana modal por defecto */
     position: fixed; /* Posición fija */
@@ -383,7 +385,10 @@ body {
   }
   
   .modal-contenido {
-    
+  
+      /* Tu código existente */
+    opacity: 0; /* Configura la opacidad inicial */
+    transition: opacity 0.3s ease; /* Agrega una transición suave */
     background-color: #282626; 
     margin: 15% auto; /* Centra la ventana modal verticalmente */
     padding: 20px; /* Espacio interno */

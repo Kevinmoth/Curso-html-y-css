@@ -48,31 +48,49 @@
   </div>  
 <!---------------------------------Menu de clases------------------------------------------->
   <div class="contenedor">
+    
     <article class="war">
         <img src="Sin título.png" title="war" alt="Imagen de fondo">
-        <div class="botones-contenedor">
-            <div class="botones">
-                <button id="boton_abrir_modal_Guias_war" class="boton">Guias</button>
-                <button class="boton">Equipo</button>
-            </div>
+        <div class="botones">
+            <button class="boton" id="abrirModalGuiasWar">Guias </button>
+            <button class="boton" id="abrirModalEquipoWar">Equipo </button>
         </div>
     </article>
     
+    <!-- Ventana Modal Guias Otra Clase -->
+    <div id="miModalGuiasWar" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrarModalGuiasWar">&times;</span>
+            <button class="boton">Armas</button>
+            <button class="boton">Proteccion</button>
+            <button class="boton">Furia</button>
+        </div>
+    </div>
+    
+    <!-- Ventana Modal Equipo Otra Clase -->
+    <div id="miModalEquipoWar" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrarModalEquipoWar">&times;</span>
+            <button class="boton">Armas</button>
+            <button class="boton">Proteccion</button>
+            <button class="boton">Furia</button>
+        </div>
+    </div>
     
     </article>
    <!------------------------------------>
    <article class="pala">
     <img src="Pala.png" alt="Imagen de fondo">
     <div class="botones">
-        <button class="boton" id="abrirModal">Guias</button>
-        <button class="boton">Equipo</button>
+        <button class="boton" id="abrirModalGuias">Guias</button>
+        <button class="boton" id="abrirModalEquipo">Equipo</button>
     </div>
 </article>
 
-<!-- Ventana Modal -->
-<div id="miModal" class="modal">
+<!-- Ventana Modal Guias -->
+<div id="miModalGuias" class="modal">
     <div class="modal-contenido">
-        <span class="cerrar-modal" id="cerrarModal">&times;</span>
+        <span class="cerrar-modal" id="cerrarModalGuias">&times;</span>
         <button class="boton">Represion</button>
         <button class="boton">Proteccion</button>
         <button class="boton">Sagrado</button>
@@ -81,6 +99,20 @@
         <button class="boton">Preg PvP</button>
     </div>
 </div>
+
+<!-- Ventana Modal Equipo -->
+<div id="miModalEquipo" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" id="cerrarModalEquipo">&times;</span>
+        <button class="boton">eq Represion</button>
+        <button class="boton">eq Proteccion</button>
+        <button class="boton">eq Sagrado</button>
+        <button class="boton">eq Sagrado PvP</button>
+        <button class="boton">eq Represion PvP</button>
+        <button class="boton">eq Preg PvP</button>
+    </div>
+</div>
+
     <!------------------------------------>
     <article class="hunter">
         <img src="Hunter.png" alt="Imagen de fondo">

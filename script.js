@@ -1,21 +1,80 @@
 //------------------------Ventanas MODAL---------------------------
-
-document.getElementById("abrirModal").addEventListener("click", function() {
-  document.getElementById("miModal").style.display = "block"; // Muestra la ventana modal al hacer clic en el botón "Guias"
+//------------------------Ventanas WAR---------------------------
+document.getElementById("abrirModalGuiasWar").addEventListener("click", function() {
+  var modal = document.getElementById("miModalGuiasWar");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
 });
 
-document.getElementById("cerrarModal").addEventListener("click", function() {
-  document.getElementById("miModal").style.display = "none"; // Oculta la ventana modal al hacer clic en el botón de cierre
+document.getElementById("cerrarModalGuiasWar").addEventListener("click", function() {
+  var modal = document.getElementById("miModalGuiasWar");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+});
+
+document.getElementById("abrirModalEquipoWar").addEventListener("click", function() {
+  var modal = document.getElementById("miModalEquipoWar");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalEquipoWar").addEventListener("click", function() {
+  var modal = document.getElementById("miModalEquipoWar");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+});
+
+//------------------------Ventanas PALA---------------------------
+document.getElementById("abrirModalGuias").addEventListener("click", function() {
+  var modal = document.getElementById("miModalGuias");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10); // Espera un poco antes de aplicar la transición para asegurarte de que la ventana modal se muestre primero
+});
+
+document.getElementById("abrirModalEquipo").addEventListener("click", function() {
+  var modal = document.getElementById("miModalEquipo");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10); // Espera un poco antes de aplicar la transición para asegurarte de que la ventana modal se muestre primero
+});
+
+document.getElementById("cerrarModalGuias").addEventListener("click", function() {
+    var modal = document.getElementById("miModalGuias");
+    modal.querySelector(".modal-contenido").style.opacity = 0;
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 300); // Espera a que la transición termine antes de ocultar la ventana modal
+});
+
+document.getElementById("cerrarModalEquipo").addEventListener("click", function() {
+    var modal = document.getElementById("miModalEquipo");
+    modal.querySelector(".modal-contenido").style.opacity = 0;
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 300); // Espera a que la transición termine antes de ocultar la ventana modal
 });
 
 // Cierra la ventana modal si el usuario hace clic fuera de ella
 window.onclick = function(event) {
-  var modal = document.getElementById("miModal");
-  if (event.target == modal) {
-      modal.style.display = "none";
+  var modales = document.getElementsByClassName("modal");
+  for (var i = 0; i < modales.length; i++) {
+    if (event.target == modales[i]) {
+      modales[i].style.display = "none";
+    }
   }
 };
-  
+
 
 
 
