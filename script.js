@@ -275,6 +275,43 @@ document.getElementById("cerrarModalEquipoMago").addEventListener("click", funct
   }, 300);
 })
 
+//------------------------Ventanas Brujo---------------------------
+
+document.getElementById("abrirModalGuiasBrujo").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasBrujo");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalGuiasBrujo").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasBrujo");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
+
+document.getElementById("abrirModalEquipoBrujo").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoBrujo");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalEquipoBrujo").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoBrujo");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
 //------------------------Ventanas xx---------------------------
 
 
