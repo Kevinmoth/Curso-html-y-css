@@ -49,6 +49,8 @@ document.getElementById("cerrarModalEquipoWar").addEventListener("click", functi
   }, 300);
 });
 
+
+
 //------------------------Ventanas PALA---------------------------
 document.getElementById("abrirModalGuias").addEventListener("click", function() {
   event.stopPropagation();

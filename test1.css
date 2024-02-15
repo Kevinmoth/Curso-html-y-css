@@ -396,7 +396,7 @@ body {
     width: 20%; /* Ancho */
     border-radius: 5%;
     overflow: auto; /* Permite desplazar el contenido de la ventana modal si es demasiado grande */
-    text-align: initial;
+    text-align: center;
     
   }
   
