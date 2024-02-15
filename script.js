@@ -351,6 +351,46 @@ document.getElementById("cerrarModalEquipoDruida").addEventListener("click", fun
   }, 300);
 })
 
+
+//------------------------Ventanas Sacer---------------------------
+
+document.getElementById("abrirModalGuiasSacer").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasSacer");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalGuiasSacer").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasSacer");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
+
+document.getElementById("abrirModalEquipoSacer").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoSacer");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalEquipoSacer").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoSacer");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
+
+
 //------------------------Ventanas xx---------------------------
 
 
