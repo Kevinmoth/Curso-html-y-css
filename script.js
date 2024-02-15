@@ -22,6 +22,14 @@ document.getElementById("abrirModalGuiasWar").addEventListener("click", function
       modal.querySelector(".modal-contenido").style.opacity = 1;
   }, 10);
 });
+//---test
+const boton = document.getElementById("abrirModalGuiasWar");
+
+    // Agrega un evento de clic al botón
+    boton.addEventListener("click", function() {
+        // Redirecciona a la página de guías
+        window.location.href = "Guias/GuiaGerreroArmas.html";
+    });
 
 document.getElementById("cerrarModalGuiasWar").addEventListener("click", function(event) {
   event.stopPropagation();
