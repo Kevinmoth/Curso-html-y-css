@@ -332,7 +332,7 @@ function init() {
   );
   camera.position.z = 1;
 
-  geometry = new THREE.PlaneGeometry(10, 10);
+  geometry = new THREE.PlaneGeometry(15, 15);
   material = new THREE.ShaderMaterial({
     uniforms: {
       time: { type: "f", value: 1.0 },
