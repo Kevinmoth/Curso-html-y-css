@@ -312,6 +312,45 @@ document.getElementById("cerrarModalEquipoBrujo").addEventListener("click", func
       modal.style.display = "none";
   }, 300);
 })
+
+//------------------------Ventanas Druida---------------------------
+
+document.getElementById("abrirModalGuiasDruida").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasDruida");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalGuiasDruida").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalGuiasDruida");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
+
+document.getElementById("abrirModalEquipoDruida").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoDruida");
+  modal.style.display = "block";
+  setTimeout(function() {
+      modal.querySelector(".modal-contenido").style.opacity = 1;
+  }, 10);
+});
+
+document.getElementById("cerrarModalEquipoDruida").addEventListener("click", function() {
+  event.stopPropagation();
+  var modal = document.getElementById("miModalEquipoDruida");
+  modal.querySelector(".modal-contenido").style.opacity = 0;
+  setTimeout(function() {
+      modal.style.display = "none";
+  }, 300);
+})
+
 //------------------------Ventanas xx---------------------------
 
 
