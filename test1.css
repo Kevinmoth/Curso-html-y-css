@@ -421,11 +421,12 @@ body {
   .container {
     width: 80%; /* Ancho de tu contenido */
     margin: 20px auto; /* Centrar el contenido */
-    border: 2px solid #333; /* Tamaño y color del marco */
+    border: 2px solid #2b2a2a; /* Tamaño y color del marco */
     padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Incluir el borde en el cálculo del tamaño */
-    background-color: #333;
-    border-radius: 5%;
+    background-color: #474747;
+    border-radius: 15px
+    ;
 
 }
 
