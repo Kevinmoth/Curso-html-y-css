@@ -413,3 +413,16 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* ------------------------------------------------------------------------ */
+  
+  /* marco de las paginas Guias y equipo */
+
+  .container {
+    width: 80%; /* Ancho de tu contenido */
+    margin: 20px auto; /* Centrar el contenido */
+    border: 5px solid #333; /* Tamaño y color del marco */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el borde en el cálculo del tamaño */
+}
+
