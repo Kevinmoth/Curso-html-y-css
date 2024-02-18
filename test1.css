@@ -418,7 +418,7 @@ body {
   
   /* marco de las paginas Guias y equipo */
 
-  .container {
+  .containerG {
     width: 80%; /* Ancho de tu contenido */
     margin: 20px auto; /* Centrar el contenido */
     border: 2px solid #2b2a2a; /* Tamaño y color del marco */
